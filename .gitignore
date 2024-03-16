@@ -1,0 +1,8 @@
+**/train_process/
+**/__pycache__/
+**/.idea/
+*.jpg
+*.jpeg
+*.png
+*.wav
+
