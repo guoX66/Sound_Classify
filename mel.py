@@ -1,3 +1,4 @@
+import argparse
 import shutil
 import librosa
 import numpy as np
@@ -5,7 +6,6 @@ import matplotlib
 import librosa.display
 import os
 import pylab
-from CNN_IC.configs import TrainImg
 from CNN_IC.myutils import get_label_list
 
 
@@ -36,7 +36,6 @@ def spcetrogramchange(foldname, label, filename, imgpath):
 def make_img(foldname, imgpath):
     print('正在将音频转为图片......')
     file_list, label_dict, _ = get_label_list(foldname)
-    imgpath = f'CNN_IC/{imgpath}'
     shutil.rmtree(imgpath, ignore_errors=True)
     for i in label_dict.keys():
         os.makedirs(f'{imgpath}/{i}', exist_ok=True)
@@ -49,5 +48,9 @@ def make_img(foldname, imgpath):
 
 
 if __name__ == '__main__':
-    Train = TrainImg()
-    make_img('wavs', Train.foldname)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--n', type=int, default=10)
+    parser.add_argument('--input', type=str, default='wavs')
+    parser.add_argument('--output', type=str, default='CNN_IC/data/static')
+    args = parser.parse_args()
+    make_img(args.input, args.output)
