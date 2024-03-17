@@ -73,7 +73,7 @@ python split.py --input i_wavs --output wavs --n 10
 然后运行转换程序
 
 ```bash
-python mel.py
+python mel.py --input wavs --output CNN_IC/data/static
 ```
 
 
@@ -81,3 +81,23 @@ python mel.py
 # 四、训练
 
 ## 进入子项目路径，按照子项目步骤进行分类训练
+
+```bash
+cd CNN_IC
+```
+
+
+
+# **五、预测
+
+与音频转换类似，将转换程序的output改成对应预测文件夹即可
+
+```bash
+python split.py --input <predict wavs file> --output <split wavs file> --n 10
+```
+
+```bash
+python mel.py --is_predict True --input <split wavs file> --output CNN_IC/predict_img
+```
+
+
