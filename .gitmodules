@@ -1,0 +1,3 @@
+[submodule "CNN_IC"]
+	path = CNN_IC
+	url = https://github.com/guoX66/CNN_IC.git

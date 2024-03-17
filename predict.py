@@ -1,8 +1,5 @@
-import os
-import torch
 from PIL import Image
-from configs import TrainImg, ModelInfo
-from utils import *
+from CNN_IC.myutils import *
 import openpyxl as op
 from torchvision import transforms
 
