@@ -20,7 +20,7 @@
 git clone --recurse-submodules https://github.com/guoX66/Sound_Classify.git
 ```
 
-或前往 [这里](https://github.com/guoX66/CNN_IC) 将子项目下载后放入本项目中
+或将子项目下载后放入本项目中
 
 ## 环境部署
 
@@ -80,4 +80,4 @@ python mel.py
 
 # 四、训练
 
-## 进入子项目路径，按照子项目步骤进行
+## 进入子项目路径，按照子项目步骤进行分类训练
