@@ -2,9 +2,13 @@
 
 本项目是将音频转换成梅尔频谱图，再通过CNN网络对图像进行分类的方法
 
+音频转换示意图如下
+
+![image](https://github.com/guoX66/Sound_Classify/blob/main/assets/pre.png)
+
+
+
 项目内包含随机扩充音频、音频切片、分割、合并等操作
-
-
 
 ## CNN图像分类使用子项目地址：[guoX66/CNN_IC (github.com)](https://github.com/guoX66/CNN_IC)
 
@@ -99,5 +103,3 @@ python split.py --input <predict wavs file> --output <split wavs file> --n 10
 ```bash
 python mel.py --is_predict True --input <split wavs file> --output CNN_IC/predict_img
 ```
-
-
